@@ -9,6 +9,9 @@ pipeline{
 
     stages{
         stage("Stage 1"){
+            environment {
+                APP_VERSION = "2.0"
+            }
             steps{
                 sh 'env'
             }
