@@ -53,5 +53,13 @@ stage('Input') {
             }
         }
 
+        stage('Skip Maven') {
+            when {
+                environment name: 'CHOICE', value: 'One'
+            }
+            steps {
+                sh 'mvn --version'
+            }    
+        }
     } 
 }          
