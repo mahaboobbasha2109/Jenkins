@@ -13,10 +13,15 @@ pipeline{
 
         password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
     }
+
     environment {
         APP_VERSION = "1.0"
         SSH = credentials('SSH-CENTOS')
     }
+
+    tools
+    maven 'MVN'
+}
 
     stages{
         stage("Stage 1"){
