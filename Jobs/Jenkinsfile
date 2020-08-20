@@ -22,7 +22,7 @@ pipeline{
     tools {
         maven 'MVN'
     }
-    
+
     stages{
         stage("Stage 1"){
             environment {
@@ -38,5 +38,20 @@ pipeline{
                 sh 'mvn --version'
             }
         }
-    }
+
+stage('Input') {
+            input {
+                message "Should we continue?"
+                ok "Yes, we should."
+                submitter "alice,bob"
+                parameters {
+                    string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+                }
+            }
+            steps {
+                echo "Hello, ${PERSON}, nice to meet you."
+            }
+        }
+
+    } 
 }          
