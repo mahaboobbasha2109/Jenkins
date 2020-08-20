@@ -32,7 +32,8 @@ pipeline{
                 sh 'env'
             }
         }
-        stage('Maven Version')c{
+
+        stage('Maven Version') {
             steps {
                 sh 'mvn --version'
             }
