@@ -19,10 +19,6 @@ pipeline{
         SSH = credentials('SSH-CENTOS')
     }
 
-    tools
-    maven 'MVN'
-}
-
     stages{
         stage("Stage 1"){
             environment {
