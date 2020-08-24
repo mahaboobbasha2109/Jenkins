@@ -31,3 +31,20 @@ pipelineJob("Catalogue-CI") {
     }
   }
 }
+
+pipelineJob("User-CI") {
+  description('CIJOB User Service')
+  definition {
+    cpsScm {
+      scm {
+        git {
+          remote {
+            url("https://DevOps-Batches@dev.azure.com/DevOps-Batches/DevOps49/_git/rs-user")
+          }
+          branch("*/master")
+        }
+      }
+      scriptPath("Jenkinsfile")
+    }
+  }
+}
