@@ -5,7 +5,7 @@ pipelineJob("Cart-CI") {
       scm {
         git {
           remote {
-            url("https://github.com/mahaboobbasha2109/Shell-Script.git")
+            url("https://DevOps-Batches@dev.azure.com/DevOps-Batches/DevOps49/_git/rs-cart")
           }
           branch("*/master")
         }
@@ -22,7 +22,7 @@ pipelineJob("Catalogue-CI") {
       scm {
         git {
           remote {
-            url("https://github.com/mahaboobbasha2109/Shell-Script.git")
+            url("https://DevOps-Batches@dev.azure.com/DevOps-Batches/DevOps49/_git/rs-catalogue")
           }
           branch("*/master")
         }
