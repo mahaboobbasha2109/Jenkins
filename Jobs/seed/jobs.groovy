@@ -32,7 +32,7 @@ pipelineJob("Catalogue-CI") {
   }
 }
 
-pipelineJob("User-CI") {
+pipelineJob("Userr-CI") {
   description('CIJOB User Service')
   definition {
     cpsScm {
